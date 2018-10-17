@@ -79,7 +79,7 @@
 
     <div class="content">
         <div class="title m-b-md">
-            test-project-change
+            test-project
         </div>
 
         <div class="links">
