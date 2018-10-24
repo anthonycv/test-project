@@ -35,21 +35,17 @@ class TasksController extends Controller
     /**
      * Show one task
      *
-     * (Query builder laravel)
+     * (route model binding)
      *
-     * $task = DB::table('tasks')->find($id);
-     *
-     * (Call from model)
-     *
-     * $task = Task::find($id);
+     * Inject a models instance into controller action
+     * Task::find(wildcard) = public function show(Task $task)
      *
      * @param $id -> id of table Tasks
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
 
-    public function show($id)
+    public function show(Task $task)
     {
-        $task = Task::find($id);
         return view('tasks.task', compact('task'));
     }
 }

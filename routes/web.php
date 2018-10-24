@@ -13,11 +13,20 @@
 
 
 /*
- * Tasks routes
+ * Tasks routes (simple mvc structure)
  */
 Route::get('/tasks','TasksController@index');
 
 Route::get('/task/{task}','TasksController@show');
+
+Route::get('/task/{task}','TasksController@show');
+
+/*
+ * Posts route (layaoutTets)
+ */
+Route::get('/posts', 'PostsController@index');
+
+Route::get('/posts/{post}', 'PostsController@show');
 
 
 /*
