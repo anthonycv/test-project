@@ -30,6 +30,12 @@ Route::get('/posts/{post}', 'PostsController@show');
 
 
 /*
+ * Email queue
+ */
+Route::get('email','EmailController@sendEmail');
+
+
+/*
  * Auth Routes
  */
 Auth::routes();
