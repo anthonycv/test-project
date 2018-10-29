@@ -1,14 +1,20 @@
 @extends('layouts.master')
 
 
+@section('posts')
 
-@section('title')
-    Titulo uno
+    <ul>
+
+        @foreach($posts as $post)
+
+                @include('posts.post')
+
+        @endforeach
+
+    </ul>
+
 @endsection
 
-@section('content')
-    Contenido Uno
-@endsection
 
 @section('scripts-footers')
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

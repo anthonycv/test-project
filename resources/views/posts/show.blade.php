@@ -1,10 +1,6 @@
 @extends('layouts.master')
 
-@section('title')
-    Place for the post title
-@endsection
-
-@section('content')
-    Place for the post content
-@endsection
+<h2>{{$post->title}}</h2>
+<span>{{$post->created_at->toDayDateTimeString()}}</span>
+<p>{{$post->body}}</p>
 

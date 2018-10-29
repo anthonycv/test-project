@@ -1,14 +1,10 @@
 @include('layouts.head-master')
 
 
+@yield('posts')
 
 
-<center>
-    <h1 id="title-post">@yield('title')</h1>
-</center>
-
-<p>@yield('content')</p>
-
+@yield('content')
 
 
 @include('layouts.footer')

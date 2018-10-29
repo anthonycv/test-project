@@ -19,18 +19,22 @@ Route::get('/tasks','TasksController@index');
 
 Route::get('/task/{task}','TasksController@show');
 
-Route::get('/task/{task}','TasksController@show');
-
 /*
  * Posts route (layaoutTets)
  */
 Route::get('/posts', 'PostsController@index');
 
+// Forms route
+Route::get('/posts/create','PostsController@create');
+
+Route::post('/posts', 'PostsController@store');
+// End forms route
+
 Route::get('/posts/{post}', 'PostsController@show');
 
 
 /*
- * Email queue
+ * Email queue route
  */
 Route::get('email','EmailController@sendEmail');
 
@@ -42,6 +46,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+
+
+/*
+ * TEST
+ */
+
+Route::get('/tests','TestsController@index');
 
 /*
  * Testing Routes

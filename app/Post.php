@@ -6,5 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    //
+    // white list of fields
+    protected $fillable = ['title', 'body'];
+
+    // Black list of fields
+    protected $guarded = ['user_id'];
 }
