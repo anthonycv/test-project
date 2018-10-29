@@ -11,4 +11,10 @@ class Post extends Model
 
     // Black list of fields
     protected $guarded = ['user_id'];
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+        
+    }
 }
