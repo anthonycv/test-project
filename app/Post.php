@@ -15,6 +15,26 @@ class Post extends Model
     public function comments()
     {
         return $this->hasMany(Comment::class);
-        
+
     }
+
+    public function addComment($comment)
+    {
+
+        // Add a comment to a post
+
+        $this->comments()->create(compact('comment'));
+
+//        $this->comments()->create(['comment' => $body]);
+
+//        Comment::create([
+//
+//            'comment' => $body,
+//
+//            'post_id' => $this->id
+//
+//        ]);
+
+    }
+
 }
