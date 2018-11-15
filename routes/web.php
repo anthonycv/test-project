@@ -11,6 +11,7 @@
 |
 */
 
+use Anthonycv\JwtManager\JwtManager;
 
 /*
  * Tasks routes (simple mvc structure)
@@ -85,6 +86,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('jwt', function () {
+
+
+    $jwtManager = new JwtManager();
+
+    $claims = [
+        'aud' => '190.237.41.61',
+        'uid' => '15',
+    ];
+
+    $jwt = $jwtManager->issue($claims);
+
+    echo "<pre>";
+    print_r($jwt);
+    echo "</pre>";
+    die("...");
+
+    return view('welcome');
+});
+
 Route::get('prueba', function () {
     return view('prueba');
 });
@@ -100,3 +121,5 @@ Route::get('prueba-parametres', function () {
     return view('prueba-parametres', compact('name', 'arrayTest'));
 
 });
+
+
